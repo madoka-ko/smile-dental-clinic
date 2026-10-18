@@ -1,0 +1,407 @@
+/* ニュース一覧 */
+/* ニュース、患者様の声、ブログ詳細ページ */
+
+
+/* ニュース一覧 */
+.newslist-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  background-color: #f8f9fa;
+  padding-bottom: 20px 40px 40px 40px;
+  box-sizing: border-box;
+}
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+.tab {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #005bac;
+  color: #005bac;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+.tab.active {
+  background-color: #005bac;
+  color: #ffffff;
+}
+.news-card.is-hidden {
+  display: none;
+}
+.news-card {
+  width: 1080px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  border-top: #005bac 1px solid;
+  padding: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+.news-icon {
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+.news-content {
+  flex-grow: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-right: 200px;
+}
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+.news-date {
+  font-size: 13px;
+  color: #005bac;
+  font-weight: 500;
+}
+.news-label {
+  font-size: 13px;
+  padding: 2px 12px;
+  border-radius: 20px;
+  border: 1px solid #005bac;
+  color: #005bac;
+}
+.news-title {
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.news-text {
+  color: black;
+  font-size: 16px;
+  font-family: serif;
+  line-height: 1.5;
+  padding-bottom: 0px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+}
+.news-card .btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+/* ページネーション */
+.pagenation {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 40px;
+}
+.page-num {
+  border: 1px solid #005bac;
+  font-size: 20px;
+  color: #005bac;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* 患者様の声詳細ページ(お知らせ、ブログ共通） */
+#topview {
+  position: relative;
+  width: 1440px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#topview .topview-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 400px;
+  background-color:#ffffff;
+}
+#topview .topview-wrapper img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1090px;
+  height: 400px;
+  object-fit: cover;
+  z-index: 1;
+}
+#topview .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 400px;
+  background: linear-gradient( 90deg,#f8f9fa 0%, #f8f9fa  30% 500px, rgba(248,249,250,0)880px);
+  z-index: 2;
+  pointer-events: none
+}
+#topmessage {
+  position: absolute;
+  left: 40px;
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 3;
+  color: #005bac;
+  z-index: 10;
+}
+/* 患者様の声セクション全体のレイアウト調整 */
+.deta-container {
+  background-color: #f4f1ea;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  position: relative;
+}
+/* 声を表示するカードエリア */
+.voice-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
+  padding: 40px;
+}
+/* 左側のアイコン */
+.card-icon {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 右側のコンテンツエリア */
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* 日付とメタ情報 */
+.card-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  border-bottom: 1px solid #005bac;
+  margin-bottom: 20px;
+}
+.card-meta .card {
+  font-size: 18px;
+  font-weight: bold;
+  color: #005bac;
+}
+/* ユーザー名 */
+.voice-title {
+  font-size: 18px;
+  margin: 0 0 16px 0;
+}
+/* 本文テキスト */
+.voice-text {
+  font-family: serif;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* 一覧へ戻る */
+.deta-container .btn {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: auto;
+  margin-top: 20px;
+  transition: opacity 0.3s;
+}
+.deta-container .btn:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================
+   スマートフォン版（レスポンシブ対応: 768px以下）
+   ========================================== */
+@media screen and (max-width: 768px) {
+
+  .newslist-container {
+    max-width: 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .filter-tabs {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+
+  .tab {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+
+  /* ニュースカードのレイアウト調整 */
+  .news-card {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 10px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .news-icon {
+    margin: 0 0 10px 0;
+  }
+
+  .news-content {
+    width: 100%;
+    /* テキストエリア全体を縦並びにして、中にボタンを綺麗に収める */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .news-meta {
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+
+  .news-date,
+  .news-label {
+    font-size: 12px;
+  }
+
+  .news-title {
+    font-size: 14px;
+    white-space: normal; /* スマホではタイトルが折り返すようにする */
+  }
+
+  .news-text {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    white-space: normal; /* スマホでは本文が折り返すようにする */
+  }
+
+  /* ★「もっと見る」ボタンをテキストの下、または右下に重ならないように配置 */
+  .news-card .btn,
+  .news-card a[href*="file:///c%3A/Users/rm017/OneDrive/Desktop/%E6%AD%AF%E5%8C%BB%E8%80%85%E3%82%B5%E3%82%A4%E3%83%88/CUSTOM/customervoice.html"], 
+  .news-card a[href*="file:///c%3A/Users/rm017/OneDrive/Desktop/%E6%AD%AF%E5%8C%BB%E8%80%85%E3%82%B5%E3%82%A4%E3%83%88/NEWS/news-date.html"],
+  .news-card a[href*="file:///c%3A/Users/rm017/OneDrive/Desktop/%E6%AD%AF%E5%8C%BB%E8%80%85%E3%82%B5%E3%82%A4%E3%83%88/CUSTOM/staffblog.html"] {
+    position: static; /* absoluteを解除して自然な流れに配置する */
+    display: block;
+    width: 90px;
+    margin-left: auto; /* 右寄せにする */
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .pagenation {
+    gap: 3px;
+    margin-top: 30px;
+  }
+
+  .page-num {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+
+  /* （以下、患者様の声詳細ページなどのスマホ用スタイルはそのまま） */
+  #topview {
+    width: 100%;
+    height: 250px;
+  }
+
+  #topview .topview-wrapper {
+    width: 100%;
+    height: 250px;
+  }
+
+  #topview .topview-wrapper img {
+    width: 100%;
+    height: 250px;
+  }
+
+  #topview .gradient-overlay {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(180deg, rgba(248,249,250,0.8) 0%, rgba(248,249,250,0.9) 100%);
+  }
+
+  #topmessage {
+    left: 20px;
+    font-size: 16px;
+    line-height: 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .deta-container {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .voice-area {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+
+  .card-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .card-meta {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+
+  .card-meta .card {
+    font-size: 16px;
+  }
+
+  .voice-title {
+    font-size: 16px;
+    margin: 0 0 12px 0;
+  }
+
+  .voice-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .deta-container .btn {
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SMILE DENTAL CLINIC - ブログ</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="スタッフブログ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../CSS/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/news_blog_voice.css">
+ </head>
+ <body>
+  <!-- ここからヘッダー -->
+   <header>
+    <a class="logo" href="index.html" >
+      <img src="../images/logo/smile-dental-clinic-high-resolution-logo-transparent.svg" alt="クリニック名">
+    </a>
+    <!-- ハンバーガーメニュー -->
+    <button id="menu-icon" onclick="document.getElementById('nav-menu').style.display = 'block'">
+      <img src="../images/icon/メニューアイコン.png" alt="ハンバーガーメニューを開く">
+    </button>
+    <!-- ナビゲーションメニュー -->
+    <div id="nav-menu">
+      <button id="close" onclick="document.getElementById('nav-menu').style.display = 'none'">
+        <img src="../images/icon/クローズアイコン.png" alt="ナビゲーションを閉じる">
+      </button>
+      
+      <p class="menu-title">MENU</p>
+
+      <nav>
+        <ul>
+          <li><a class="menu" href="../index.html"onclick="document.getElementById('nav-menu').style.display = 'none'">ホーム</a></li>
+          <li><a class="menu" href="../index.html#concept"onclick="document.getElementById('nav-menu').style.display = 'none'">当院について</a></li>
+          <li>
+            <a class="menu" href="../index.html#medical-section"onclick="document.getElementById('nav-menu').style.display = 'none'">診療案内</a>
+            <ul class="sub-menu">
+              <li><a href="../MEDICAL/medical.html#general"onclick="document.getElementById('nav-menu').style.display = 'none'">一般歯科</a></li>
+              <li><a href="../MEDICAL/medical.html#aesthetic"onclick="document.getElementById('nav-menu').style.display = 'none'">審美歯科</a></li>
+              <li><a href="../MEDICAL/medical.html#preventive"onclick="document.getElementById('nav-menu').style.display = 'none'">予防歯科</a></li>
+            </ul>
+          </li>
+           <li>
+            <a class="menu" href="index.html#director"onclick="document.getElementById('nav-menu').style.display = 'none'">スタッフ紹介</a>
+            <ul class="sub-menu">
+              <li><a href="../index.html#director">院長紹介</a></li>
+              <li><a href="../CONCEPT_MEMBER/concept-menber.html#director"onclick="document.getElementById('nav-menu').style.display = 'none'">スタッフ紹介</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu" href="../index.html#news-section"onclick="document.getElementById('nav-menu').style.display = 'none'">お知らせ</a>
+            <ul class="sub-menu">
+              <li><a href="../NEWS/newslist.html#news"onclick="document.getElementById('nav-menu').style.display = 'none'">お知らせ</a></li>
+              <li><a href="../NEWS/newslist.html#voice"onclick="document.getElementById('nav-menu').style.display = 'none'">患者様の声</a></li>
+              <li><a href="../NEWS/newslist.html#bolg"onclick="document.getElementById('nav-menu').style.display = 'none'">スタッフブログ</a></li>
+            </ul>
+          </li>
+           <li>
+            <a class="menu" href="../index.html#contact-section"onclick="document.getElementById('nav-menu').style.display = 'none'">お問い合わせ</a>
+            <ul class="sub-menu">
+              <li><a href="tel:000000000">電話予約</a></li>
+              <li><a href="../CONTACT/contact.html"onclick="document.getElementById('nav-menu').style.display = 'none'">WEBお問い合わせ</a></li>
+            </ul>
+          </li>
+          <li><a class="menu" href="../index.html#access"onclick="document.getElementById('nav-menu').style.display = 'none'">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+   </header>
+  <!-- ヘッダーここまで -->
+
+  <main>
+    <article>
+    <!-- TOPview -->
+    <section id="topview">
+      <div class="topview-wrapper">
+        <div class="gradient-overlay"></div>
+        <img src="../images/img/img_1.jpg" alt="テーブルと歯科医療器具">
+      </div>
+    </section>
+    <section id="deta-section">
+      <div class="deta-container">
+        <div class="section-header">
+          <h2 class="title">ブログ</h2>
+          <p class="subtitle">Blog</p>
+        </div>
+        <div class="voice-area">
+        <div class="card-icon">
+          <img src="../images/icon/news-toothアイコン.png" alt="歯のアイコン">
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <p class="card">2026.06.04</p>
+            <h2 class="voice-title">6/4は虫歯予防デー</h2>
+          </div>
+          <p class="voice-text">
+            こんにちは！歯科衛生士の加藤です。<br>毎年6/4は６(む) ４(し)の語呂合わせから｢虫歯予防デー」になっています。<br>
+            虫歯予防のためには3つのステップがあります。今日はその3つのステップを紹介します。<br>
+            1つ目はプラークの除去です。毎日の丁寧なブラッシングで虫歯の原因となる歯垢を落とします。<br>
+            2つ目はフッ素です。フッ素入りの歯磨き粉の使用により歯の石灰化を防ぎ強い歯にします。<br>
+            3つ目は食生活です。ダラダラ食べや間食の回数を少なくすることで、歯が酸にさらされる時間を短くします。</p>
+          <a href="../NEWS/newslist.html" class="btn">一覧へ戻る</a>
+        </div>
+      </div>
+    </section>
+      
+    
+    </article>
+  </main>
+  
+  <!-- フッターここから -->
+  <footer>
+    <div class="footer-top">
+    <div id="footer-left-container">
+      <a class="logo" href="../index.html">
+        <img src="../images/logo/smile-dental-clinic-high-resolution-logo-transparent.svg" alt="smiledentalclinic">
+      </a>
+      <div class="btn-wrapper">
+        <a href="../index.html#contact-section" class="btn">お問い合わせ<br>はこちら　&rarr;</a>
+      </div>
+    </div>
+    <div id="footer-right-container">
+      <div class="phone-info-row">
+        <img class="ringer-volume" src="../images/icon/Ringer-Volume.png" alt="電話のアイコン">
+        <div class="tel-numbar">000-000-0000</div>
+      </div>
+      <div class="text02">
+        8:30~12:00、14:30~17:30<br>
+        （土曜 8:30~12:30）<br>
+        ※水・日・祝 休診
+      </div>
+    </div>
+    </div>
+    <div id="footer-link">
+      <a href="../index.html#concept">当院について</a>
+      <a href="../index.html#medical-section">診療内容</a>
+      <a href="../index.html#director">スタッフ紹介</a>
+      <a href="../index.html#blog">ブログ</a>
+      <a href="../index.html#contact-section">お問い合わせ</a>
+      <a href="../index.html#access">アクセス</a>
+    </div>
+    <div id="copyright">
+      <p>&copy;Smail Dental Clinic All Right Reserved.</p>
+    </div>
+  </footer>
+ </body>
+</html>

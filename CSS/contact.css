@@ -1,0 +1,334 @@
+
+   /* お問い合わせトップセクション*/
+#topview {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+.topview-wrapper {
+  position: relative;
+  width: 1440px;
+  height: 500px;
+  background-color:#ffffff;
+  overflow: hidden;
+}
+.topview-wrapper img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  object-position: 10% 20%;
+}
+#topview .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 500px;
+  background: linear-gradient( 90deg,#f8f9fa 0%, rgba(248,249,250,0)550px);
+  z-index: 2;
+  pointer-events: none
+}
+
+.topview-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1300px;
+  height: 100%;
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* ヘッダータイトル */
+.contact-page-header {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.contact-page-title {
+  color: #005bac;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+.contact-page-subtitle {
+  color: #005bac;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 5px 0 0 0;
+  letter-spacing: 2px;
+}
+#topmessage {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2.5;
+  color: #005bac;
+  margin: 0;
+}
+
+
+   /* お問い合わせフォーム */
+.contact-page-section {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+  background-color: #e6f0fa;
+  box-sizing: border-box;
+}
+.contact-page-container {
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form-box {
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-form-box .form-row {
+  border-bottom: rgba(0, 91, 172, 0.2) 1px solid;
+  padding: 20px 0;
+}
+.contact-form-box .form-row:last-of-type {
+  border-bottom: none;
+}
+/* 左側のラベル部分 */
+.form-row {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+}
+.form-label {
+  width: 280px;
+  padding: 25px 20px;
+  background-color: #e6f0fa;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.form-label small {
+  font-size: 14px;
+  display: block;
+  font-weight: 400;
+}
+
+/* 必須バッジ */
+.required-badge {
+  color: #ce2222;
+  font-size: 14px;
+  padding: 2px 8px;
+  font-weight: 600;
+}
+
+/* 右側の入力エリア */
+.form-input {
+  flex: 1;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.form-input input[type="text"],
+.form-input input[type="email"],
+.form-input input[type="tel"],
+.form-input textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.form-input textarea {
+  resize: vertical;
+}
+
+/* チェックボックス・ラジオボタン */
+.checkbox-group,
+.radio-group {
+  gap: 12px;
+}
+.checkbox-group label,
+.radio-group label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.checkbox-group label:last-child,
+.radio-group label:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #005bac;
+  cursor: pointer;
+}
+
+/* 送信ボタンエリア */
+.form-submit-area {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(230, 240, 250, 0.4);
+}
+
+.submit-btn {
+  background-color: #ff9f1c;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================
+   スマートフォン版（レスポンシブ対応: 768px以下）
+   ========================================== */
+@media screen and (max-width: 768px) {
+
+  /* --- お問い合わせトップセクション --- */
+  #topview {
+    width: 100%;
+    height: auto;
+  }
+
+  .topview-wrapper {
+    width: 100%;
+    height: 300px; /* スマホ用に高さを調整 */
+  }
+
+  .topview-wrapper img {
+    object-position: center;
+  }
+
+  /* グラデーションをスマホ用に調整（必要に応じて全画面を覆う等） */
+  #topview .gradient-overlay {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(180deg, rgba(248,249,250,0.9) 0%, rgba(248,249,250,0.4) 100%);
+  }
+
+  .topview-content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-page-header {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .contact-page-title {
+    font-size: 28px;
+  }
+
+  .contact-page-subtitle {
+    font-size: 16px;
+  }
+
+  #topmessage {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+
+  /* --- お問い合わせフォームセクション --- */
+  .contact-page-section {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .contact-page-container {
+    width: 80%;
+  }
+
+  /* フォームの行を「縦並び」に変更 */
+  .form-row {
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+
+  .form-row:last-child {
+    border-bottom: none;
+  }
+
+  /* ラベル部分を横幅いっぱいにする */
+  .form-label {
+    width: 100%;
+    padding: 0 0 10px 0;
+    background-color: transparent;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  /* 右側の入力エリアを横幅いっぱいにすし、パディングを調整 */
+  .form-input {
+    width: 100%;
+    padding: 0;
+  }
+
+  .form-input input[type="text"],
+  .form-input input[type="email"],
+  .form-input input[type="tel"],
+  .form-input textarea {
+    font-size: 16px; /* スマホでフォームにズームインしないよう16pxを維持 */
+    padding: 10px;
+  }
+
+  /* 送信ボタンエリア */
+  .form-submit-area {
+    padding: 20px 0;
+    background-color: transparent;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+  }
+}

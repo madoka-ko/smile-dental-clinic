@@ -1,0 +1,269 @@
+/* 診療内容 */
+#medical02-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  background-color: #f8f9fa;
+}
+.medical02-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+.medical02-container .section-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* 4つのブロックをまとめて角丸・幅1200pxのグリッドBOX */
+.medical-grid-box {
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+/* 1ブロック（左右レイアウト）の基本スタイル */
+.medical-block {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 450px;
+  gap: 0;
+  margin: 0;
+}
+/* 左右を反転させる */
+.medical-block-reverse {
+  flex-direction: row-reverse;
+}
+/* テキストエリア */
+.medical-text-area {
+  width: 50%;
+  height: 450px;
+ padding: 10px 50px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ box-sizing: border-box;
+}
+
+/* 画像エリア */
+.medical-img-area {
+  width: 50%;
+  height: 450px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.medical-img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 背景色パターン */
+.medical-text-area.bg-blue {
+  background-color: #e6f0fa;
+}
+
+.medical-text-area.bg-beige {
+  background-color: #f4f1ea;
+}
+.medical-heading {
+  font-family: serif;
+  font-size: 35px;
+  font-weight: 500;
+  color: #ff9f1c;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 0;
+}
+
+.medical-desc {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 2.2;
+  margin: 0;
+}
+/* 診療項目リスト（一般・審美・予防） */
+.treatment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding: 20px 20px;
+  margin: 20px;
+}
+
+.treatment-item {
+  background-color: #e6f0fa;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+#aesthetic {
+  background-color: #f4f1ea;
+}
+.treatment-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #005bac;
+}
+
+.treatment-title-bar h4 {
+  font-size: 26px;
+  color: #005bac;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.treatment-title-bar h4 span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #005bac;
+}
+
+.treatment-text {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0 20px;
+}
+
+/* ==========================================
+   スマートフォン版（レスポンシブ対応: 768px以下）
+   ========================================== */
+@media screen and (max-width: 768px) {
+
+  /* 全体セクションとコンテナ */
+  #medical02-section {
+    width: 100%;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .medical02-container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .medical02-container .section-header {
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+
+  /* --- 4つのブロックをまとめたグリッドBOX（上下の縦並び・角丸20px） --- */
+  .medical-grid-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* 各ブロック（縦並びへ変更） */
+  .medical-block {
+    width: 100%;
+    height: auto;
+    flex-direction: column !important;
+    box-sizing: border-box;
+  }
+
+  /* テキストエリア（スマホ用に高さを自動調整・パディング縮小） */
+  .medical-text-area {
+    width: 100%;
+    height: auto;
+    padding: 25px 20px;
+    box-sizing: border-box;
+  }
+
+  /* 画像エリア（スマホ用に高さ調整） */
+  .medical-img-area {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+  }
+  .medical-img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .medical-heading {
+    font-size: 26px;
+    margin-bottom: 15px;
+    word-break: break-all;
+  }
+
+  .medical-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    word-break: break-all;
+  }
+
+
+  /* --- 診療項目リスト（一般・審美・予防など）（角丸20px） --- */
+  .treatment-list {
+    width: 100%;
+    gap: 30px;
+    margin: 0 0 40px 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .treatment-item {
+    width: 100%;
+    border-radius: 20px; /* ご指定の角丸20px */
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .treatment-title-bar {
+    margin: 0 0 12px 0;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #005bac;
+  }
+
+  .treatment-title-bar h4 {
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+  .treatment-title-bar h4 span {
+    font-size: 16px;
+  }
+
+  .treatment-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: break-all;
+  }
+}

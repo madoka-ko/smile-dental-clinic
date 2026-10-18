@@ -1,0 +1,1752 @@
+body{
+  max-width: 1440px;
+  margin: 0 auto 0 auto;
+  font-family: "Noto Sans JP","Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+@media screen and (max-width: 768px) {
+  /* 1. bodyの最大幅固定を解除し、画面いっぱいに広げる */
+  body {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+}
+/* ============================================================================== */
+/* ヘッダー */
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  width: 1440px;
+  height: 100px;
+ position: relative;
+}
+a.logo img{
+  display: block;
+  margin: 10px auto;
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 206px;
+}
+
+/* ハンバーガーメニュー */
+button#menu-icon {
+ background-color: transparent;
+ padding: 0;
+ border: none;
+ cursor: pointer;
+}
+
+/* ナビゲーションメニュー */
+#nav-menu {
+  background-color: #e6f0fa;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 650px;
+  width: 630px;
+  max-width: 100vw;
+  display: none;
+  z-index: 100;
+}
+/* クローズボタン */
+#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+/* ｢MENU｣テキスト */
+.menu-title {
+  font-size: 18px;
+  color: #005bac;
+  margin: 0;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  height: 100px;
+  padding: 0 20px;
+}
+.menu-title::after{
+  content: "";
+  display: block;
+  width: 420px;
+  height: 2px;
+  background-color: rgba(0, 91, 172, 0.2);
+}
+#nav-menu nav {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+#nav-menu nav > ul {
+  padding-left: 80px;
+  margin: 0 auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+/* メインリンク */
+.menu {
+  display: inline-block;
+  font-size: 24px;
+  color: #005bac;
+  text-decoration: none;
+}
+/* サブメニュー */
+.sub-menu {
+  list-style: none;
+  padding-left: 5px;
+  margin-top: 6px;
+}
+.sub-menu li {
+  margin-bottom: 4px;
+  margin-left: 10px;
+}
+.sub-menu a {
+  font-size: 18px;
+  color:rgba(0, 91, 172, 0.4);
+  text-decoration: none;
+  align-items: center;
+}
+.sub-menu a::before {
+  content: "ー";
+  margin-right: 4px;
+  color: rgba(0, 91, 172, 0.2);
+}
+@media screen and (max-width: 768px) {
+  /* ヘッダーの幅をスマホの画面幅いっぱいに調整 */
+  header {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 50px;
+  }
+
+  /* ロゴの大きさをスマホ用に調整 */
+  a.logo img {
+    width: 140px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+
+  /* ハンバーガーメニューボタン*/
+  button#menu-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  button#menu-icon img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+  }
+
+  /* ナビゲーションメニューをスマホ画面全体にきれいに収める */
+  #nav-menu {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto; /* メニューが長い場合にスクロールできるようにする */
+  }
+
+  /* クローズボタンの位置と大きさ調整 */
+  #close {
+    padding: 0;
+  }
+  #close img {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* 「MENU」タイトルの調整 */
+  .menu-title {
+    font-size: 12px;
+    height: 60px;
+    padding: 0 50px;
+  }
+  .menu-title::after {
+    width: 100%;
+    max-width: auto; 
+    
+  }
+
+ #nav-menu nav > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列の横並びにする */
+    gap: 15px 15px; /* 項目同士の隙間をスマホ用に少しコンパクトにする */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  /* メインメニューの文字サイズ調整 */
+  .menu {
+    font-size: 18px;
+  }
+
+  /* サブメニューの文字サイズ調整 */
+  .sub-menu a {
+    font-size: 14px;
+  }
+}
+
+/* ==================================================================== */
+/* メインビジュアル */
+#main-visual {
+  position: relative;
+  height: 550px;
+  width: 1440px;
+}
+.hero {
+  width: 676px;
+  height: 550px;
+  left: 0px;
+  top: 0;
+  position: absolute;
+}
+.img-2 {
+  opacity: 0.35;
+  width: 764px;
+  height: 550px;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+}
+#main-message h1 {
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  right: 140px;
+  z-index: 10;
+  color: #005bac;
+  font-size: 32px;
+  font-family: 'Zen Old Mincho',serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+#main-message span {
+  color: #ff9f1c;
+  font-size: 48px;
+  font-family: 'Zen Old Mincho',serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+#main-visual .contact-phone-box {
+  position: absolute;
+  left: 800px;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 540px;
+  z-index: 10;  
+}
+.text01 {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Zen Old Mincho',serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+#main-visual .phone-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  border-top: #005bac 1px solid;
+  border-bottom: #005bac 1px solid;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.ringer-volume {
+  width: 68px;
+  height: 65px;
+}
+.tel-numbar {
+  color: black;
+  font-size: 48px;
+  font-family: 'Zen Old Mincho',serif;
+  font-weight: 400;
+}
+.text02 {
+  color: black;
+  font-size: 20px;
+  font-family: 'Zen Old Mincho',serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  /* メインビジュアル全体：幅を画面いっぱいにし、高さを自動調整 */
+  #main-visual {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* hero画像は非表示 */
+  .hero {
+    display: none;
+  }
+
+  /* img-2（待合室画像）を画面いっぱいに広げる */
+  .img-2 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    opacity: 0.35;
+    top: auto;
+    right: auto;
+    left: auto;
+  }
+
+  /* メインメッセージを画像の上に配置 */
+  #main-message {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    line-height: 2.2;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 10;
+  }
+
+  #main-message h1 {
+    position: static;
+    transform: none;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    right: auto;
+    top: auto;
+  }
+
+  #main-message span {
+    font-size: 36px;
+  }
+
+  /* text01以下（予約情報ボックス）を画像の下に配置 */
+  #main-visual .contact-phone-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 0;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6f0fa;
+  }
+
+  /* 電話番号の行（アイコンと番号）の調整 */
+  #main-visual .phone-info-row {
+    gap: 15px;
+    padding: 10px 0;
+    width: 80%;
+  }
+
+  .ringer-volume {
+    width: 36px;
+    height: 34px;
+  }
+
+  .tel-numbar {
+    font-size: 32px;
+    width: auto;
+    height: auto;
+  }
+
+  .text01, .text02 {
+    font-size: 16px;
+  }
+}
+
+/* ====================================================================== */
+
+/* ニュース */
+#news-section {
+  background: #f8f9fa;
+  width: 1440px;
+  min-height: 520px;
+  margin: 0px;
+  padding: 50px 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+.news-container {
+  width: 1080px;
+  margin: 0 auto;
+}
+/* ニュース見出し */
+.section-header {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  color: #005bac;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+.subtitle {
+  color: #005bac;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px;
+  text-align: center;
+}
+/* ニュースリスト */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+.news-item {
+  border-top: 1px solid rgba(0, 91, 172, 0.4);
+  width: 1080px;
+}
+.news-item:last-child {
+  border-bottom: 1px solid rgba(0, 91, 172, 0.4);
+  width: 1080px;
+}
+.news-link {
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;
+  text-decoration: none;
+  color: #005bac;
+  transition: opacity 0.3;
+}
+.news-link:hover {
+  opacity: 0.7;
+}
+.news-date {
+  font-size: 14px;
+  width: 70px;
+  flex-shrink: 0;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+.news-category {
+  font-size: 13px;
+  color: #005bac;
+  border: 1px solid #005bac;
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-right: 100px;
+  flex-shrink: 0;
+}
+.news-text {
+  font-size: 16px;
+  color: #005bac;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* もっと見るボタン */
+.btn-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+.btn {
+  display: inline-block;
+  background-color: #ff9f1c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 12px 48px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. ニュースセクション全体の幅・余白をスマホ用に調整 */
+  #news-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 30px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. コンテナの幅を100%にする */
+  .news-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+
+  }
+
+  /* 3. 見出し（タイトル・サブタイトル）のフォントサイズ調整 */
+  .title {
+    font-size: 28px !important;
+  }
+
+  .subtitle {
+    font-size: 14px !important;
+  }
+
+  /* 4. ニュースリストの各アイテムの幅を100%に */
+  .news-item,
+  .news-item:last-child {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 5. ニュースリンク（日付・カテゴリ・テキスト）のレイアウト調整 */
+  .news-link {
+    flex-wrap: wrap !important; /* 画面幅に合わせて日付やカテゴリを折り返せるようにする */
+    gap: 8px 12px !important;
+    padding: 12px 5px !important;
+  }
+
+  /* 日付 */
+  .news-date {
+    font-size: 12px !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin-right: 10px !important;
+  }
+
+  /* カテゴリバッジ */
+  .news-category {
+    font-size: 11px !important;
+    padding: 2px 10px !important;
+    margin-right: 0 !important;
+  }
+
+  /* ニュース本文（スマホでは必要に応じて折り返す、または省略を維持） */
+  .news-text {
+    font-size: 14px !important;
+    width: 100% !important; /* スマホでは下の行に回り込ませる場合 */
+    white-space: normal !important; /* 長いテキストが隠れないように折り返しを許可 */
+  }
+
+  /* 6. 「もっと見る」ボタンの調整 */
+  .btn-wrapper {
+    margin-top: 20px !important;
+  }
+
+  .btn {
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+}
+
+/* ===================================================================== */
+/* 診療案内 */
+#medical-section {
+  width: 1440px;
+  min-height: 853px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.medical-frame {
+  width: 1360px;
+  border: 2px solid #ff9f1c;
+  border-radius: 70px;
+  box-sizing: border-box;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.medical-frame > p {
+  width: 816px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 30px;
+}
+/* 3列カードコンテンツ */
+.medical-container {
+  width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 80px;
+}
+.medical-card-blue {
+  flex: 1;
+  padding: 32px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #e6f0fa;
+}
+.medical-card-beige {
+  flex: 1;
+  padding: 32px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f4f1ea;
+}
+.card-title {
+  font-size: 26px;
+}
+.card-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: left;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. セクション全体の幅・余白をスマホ用に調整 */
+  #medical-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 30px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. 外枠（フレーム）の幅や角丸をスマホサイズに最適化 */
+  .medical-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 30px !important; /* スマホでは角丸を少し小さくする */
+    padding: 30px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. フレーム内の紹介テキストの幅を100%にし、文字サイズを調整 */
+  .medical-frame > p {
+    width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-top: 15px !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  /* 4. 3列のカードコンテナを「縦並び（column）」に変更 */
+  .medical-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: column !important; /* 横並びから縦並びに変更 */
+    gap: 20px !important; /* カード同士の間隔 */
+    margin-top: 20px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 5. 各カードの幅を100%に広げる */
+  .medical-card-blue,
+  .medical-card-beige {
+    width: 100% !important;
+    padding: 24px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 6. カード内の見出し・テキストの調整 */
+  .card-title {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .card-text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    padding-left: 0 !important;
+    text-align: center !important; 
+  }
+}
+/* ========================================================================== */
+/* 当院について */
+.concept-section {
+  width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url("../images/img/背景.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  }
+.concept-container {
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* CONCEPT見出し */
+.section-header {
+  width: 260px;
+  height: 77px;
+}
+.concept-title {
+  color: #005bac;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+}
+.concept-subtitle {
+  color: #005bac;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px;
+  text-align: center;
+}
+/* キャッチコピー */
+.concept-message {
+  text-align: center;
+}
+.concept-catch-main {
+  color: #ff9f1c;
+  font-family: 'Zen old Mincho',serif;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.concept-catch-sub {
+  color: #005bac;
+  font-size: 36px;
+  font-family: serif;
+  font-weight: 500;
+  margin: 0;
+}
+.concept-text {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-top: 20px;
+  font-weight: 500;
+}
+/* メインコンテンツ　画像　円形ポイント */
+.concept-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.concept-photo {
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.concept-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.concept-points {
+  position: relative;
+  width: 470px;
+  height: 436px;
+  flex-shrink: 0;
+}
+.point-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f4f1ea;
+  border: 1px solid #ff9f1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #005bac;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.point-top {
+  width: 230px;
+  height: 230px;
+  top: 0;
+  left: 120px;
+}
+.point-bottom-left {
+  width: 230px;
+  height: 230px;
+  bottom: 0;
+  left: 0;
+}
+.point-bottom-right {
+  width: 230px;
+  height: 230px;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. 全体の幅やパディングの調整 */
+  .concept-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 40px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .concept-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+/* 2. 見出しエリアの調整 */
+  .section-header {
+    width: 100% !important;
+    height: auto !important;
+    text-align: center !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .concept-title {
+    font-size: 26px !important;
+  }
+
+  .concept-subtitle {
+    font-size: 14px !important;
+  }
+
+  /* 3. キャッチコピーの文字サイズと折り返し調整 */
+  .concept-message {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 5px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .concept-catch-main {
+    font-size: 26px !important; /* スマホ画面からはみ出さないように縮小 */
+    letter-spacing: 1px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .concept-catch-sub {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+
+  /* 4. 本文テキストの調整 */
+  .concept-text {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    margin-top: 15px !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  /* 5. メインコンテンツ（画像と円形ポイント群）を「縦並び」にする */
+  .concept-content {
+    display: flex !important;
+    flex-direction: column !important; /* 画像とポイント群を上下の縦並びにする */
+    align-items: center !important;
+    gap: 40px !important; /* 画像とトライアングル配置の間隔 */
+    width: 100% !important;
+    margin-top: 30px !important;
+  }
+
+  /* 6. 円形画像のサイズ調整 */
+  .concept-photo {
+    width: 100% !important;
+    max-width: 100%;
+    height: 260px !important;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+  .concept-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* 7. 3つの円形ポイントのコンテナ（トライアングル配置のエリア） */
+  .concept-points {
+    position: relative !important;
+    width: 320px !important;  /* スマホ画面に収まるようにコンテナサイズを縮小 */
+    height: 290px !important; /* 三角形が収まる高さに調整 */
+    margin: 0 auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 8. 3つの円形サークルのトライアングル配置（サイズと位置の調整） */
+  .point-circle {
+    position: absolute !important;
+    border-radius: 50% !important;
+    background-color: #f4f1ea !important;
+    border: 1px solid #ff9f1c !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    color: #005bac !important;
+    font-size: 15px !important; /* スマホ用に文字サイズを調整 */
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    box-sizing: border-box !important;
+    padding: 10px !important;
+  }
+
+  /* 上の円 */
+  .point-top {
+    width: 150px !important;
+    height: 150px !important;
+    top: 0 !important;
+    left: 85px !important; /* 320px幅の中央に配置 (320-150)/2 = 85 */
+  }
+
+  /* 左下の円 */
+  .point-bottom-left {
+    width: 150px !important;
+    height: 150px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+
+  /* 右下の円 */
+  .point-bottom-right {
+    width: 150px !important;
+    height: 150px !important;
+    bottom: 0 !important;
+    right: 0 !important;
+  }
+}
+/* =========================================================== */
+/* ごあいさつセクション */
+.greeting-section {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+  background-image: url("../images/img/歯ブラシ.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+  box-sizing: border-box;
+}
+.greeting-container {
+  width: 1348px;
+  margin: 0 auto;
+  border-radius: 70px;
+  padding: 40px 150px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255,0.7)
+}
+.greeting-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+/* 院長カード（左側） */
+.director-card {
+  width: 363px;
+  min-height: 508px;
+  flex-shrink: 0;
+}
+.director-photo {
+  width: 100%;
+  border-radius: 30px 0 0 0; 
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.director-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.director-info {
+  background-color: #f4f1ea;
+  border-radius: 0 0 0 50px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.director-info .clinic-name {
+  color: #005bac;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
+}
+.director-info .director-name {
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+/* あいさつ文ボックス（右側） */
+.greeting-message-box {
+  flex-grow: 1;
+  background-color: rgba(230, 240, 250, 0.8);
+  border-radius: 0 50px 50px 0;
+  padding: 40px;
+  box-sizing: border-box;
+  width: 621px;
+  min-height: 508px;
+}
+.greeting-message-box p {
+  font-size: 20px;
+  line-height: 2.5;
+  margin: 0;
+  width: 527px;
+  font-family:'Zen old Mincho',serif;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. ごあいさつセクション全体の幅と背景の調整 */
+  .greeting-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 180px;
+    padding: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    box-sizing: border-box !important;
+    position: relative;
+  }
+
+  /* 2. スマホでは不要なコンテナや長文のあいさつボックス、院長カードを非表示にする */
+  .greeting-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important; /* 背景の半透明白を消して画像を見せる */
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+  }
+　.greeting-section .section-header,
+  .greeting-section h2,
+  .greeting-section p,
+  .greeting-section .greeting-title,
+  .greeting-section .greeting-subtitle {
+    display: none !important;
+  }
+  /* 院長カード、あいさつ文をスマホでは非表示にする */
+  .greeting-content {
+    display: none !important;
+  }
+}
+
+/* ================================================================== */
+/* 患者様の声・staffblogコンテンツセクション */
+#voice-blog-section {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+.voice-blog-container {
+  width: 1080px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.voice-blog-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.voice-blog-card {
+  flex: 1;
+  min-height: 250px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+}
+.voice-card {
+  background-image: url("../images/img/植物.jpg");
+}
+.blog-card {
+  background-image: url("../images/img/img_1.jpg");
+}
+.inner-box {
+  width: 80%;
+  height: 200px;
+  background-color: rgba(255, 255, 255,0.7);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-box p {
+  color: #005bac;
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. セクション全体の幅とパディングをスマホ用に最適化 */
+  #voice-blog-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 30px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. コンテナの幅を100%にする */
+  .voice-blog-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. 横並びのカード群を「縦並び（column）」に変更 */
+  .voice-blog-cards {
+    display: flex !important;
+    flex-direction: column !important; /* 横並びから縦並びに変更 */
+    gap: 20px !important; /* カード同士の間隔 */
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. 各カードの幅を100%にし、高さや見た目をスマホ用に調整 */
+  .voice-blog-card {
+    width: 100% !important;
+    min-height: 180px !important; /* スマホで見やすい高さに調整 */
+    box-sizing: border-box !important;
+  }
+
+  /* 5. カード内のインナーボックス（白い半透明の部分）のサイズ調整 */
+  .inner-box {
+    width: 85% !important;
+    height: 120px !important; /* 高さをスマホ用にコンパクトにする */
+    border-radius: 30px !important; /* 角丸を少し小さくする */
+  }
+
+  /* 6. テキストの文字サイズをスマホ用に縮小 */
+  .inner-box p {
+    font-size: 20px !important; /* スマホ画面からはみ出さないサイズに調整 */
+  }
+}
+
+/* ============================================================== */
+/* ご予約・お問い合わせ セクション */
+.contact-section {
+  width: 100%;
+  width: 1440px;
+  min-height: 390px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+ 
+}
+.contact-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.contact-container {
+  position: relative;
+  z-index: 1;
+  width: 1080px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-title {
+  font-size: 36px;
+  font-family: "Zen Old Mincho",serif;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 5px;
+  width: 100%;
+  margin-top: 0 0 30px 0;
+}
+/* 電話とボタンエリア */
+.contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+ 
+}
+.contact-phone-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 540px;  
+}
+.phone-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  border-top: #005bac 1px solid;
+  border-bottom: #005bac 1px solid;
+}
+.contact-section .ringer-volume {
+  width: 70px;
+  height: 60px;
+  object-fit: contain;
+  position: static;
+}
+.contact-section .tel-numbar {
+  font-size: 48px;
+  font-family: serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  width: auto;
+  height: auto;
+  position: static;
+}
+.contact-section .text02 {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+  width: auto;
+  height: auto;
+  position: static;
+  margin-top: 10px;
+}
+.contact-section .btn-wrapper {
+  margin-top: 0;
+  text-align: center;
+  flex-grow: 1;
+}
+.contact-section .btn {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+  padding: 12px 48px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. セクション全体の幅とパディングをスマホ用に最適化 */
+  .contact-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 40px 15px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 2. 背景画像をスマホの画面幅に合わせて綺麗にフィットさせる */
+  .contact-bg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* 3. コンテナの幅を100%にし、中央寄せにする */
+  .contact-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. タイトルの文字サイズと余白調整 */
+  .contact-title {
+    font-size: 22px !important;
+    letter-spacing: 2px !important;
+    margin: 0 0 25px 0 !important;
+    text-align: center !important;
+  }
+
+  /* 5. 電話エリアとボタンエリアを「縦並び」にする */
+  .contact-inner {
+    display: flex !important;
+    flex-direction: column !important; /* 横並びから縦並びに変更 */
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 30px !important; /* 電話ボックスとボタンの間隔 */
+    width: 100% !important;
+  }
+
+  /* 6. 電話ボックスの幅を100%にし、中央寄せ */
+  .contact-phone-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: center !important;
+  }
+
+  .phone-info-row {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    padding: 10px 0 !important;
+  }
+
+  /* 電話アイコンのサイズ調整 */
+  .contact-section .ringer-volume {
+    width: 40px !important;
+    height: 35px !important;
+  }
+
+  /* 電話番号の文字サイズ調整 */
+  .contact-section .tel-numbar {
+    font-size: 28px !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* 電話番号下の受付時間などのテキスト調整 */
+  .contact-section .text02 {
+    font-size: 14px !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+  }
+
+  /* 7. お問い合わせボタンを電話ボックスの下に配置し、見やすく整える */
+  .contact-section .btn-wrapper {
+    width: 100% !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+  }
+
+  .contact-section .btn {
+    display: block !important;
+    width: 100% !important;
+    max-width: 300px !important; /* ボタンの最大幅 */
+    margin: 0 auto !important;   /* 中央に配置 */
+    font-size: 16px !important;
+    padding: 14px 20px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+}
+
+/* ====================================================== */
+/* 病院案内 */
+.access-section {
+  background-color: #e6f0fa;
+  width: 1440px;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.access-container {
+  max-width: 1235px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.access-top-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.access-map {
+  width: 582px;
+  overflow: hidden;
+  border-radius: 50px 0 0 0;
+  flex-shrink: 0;
+  display: flex;
+}
+.access-map iframe {
+  width: 100%;
+  height: 100% !important;
+  border: 0;
+  display: block;
+}
+/* Access情報ボックスs */
+.access-info-box {
+  width: 653px;
+  box-sizing: border-box;
+  background-color: #f4f1ea;
+  border-radius: 0 50px 0 0;
+  padding: 20px;
+  border: 1px solid #ff9f1c;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.access-address {
+  font-size: 20px;
+  margin: 10px;
+}
+.access-address strong {
+  margin-right: 20px;
+}
+.access-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0;
+}
+.access-method:last-child {
+  margin-bottom: 0;
+}
+.access-method .car-icon {
+  position: static;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.method-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.method-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #163760;
+  margin: 0;
+}
+.method-text {
+  font-size: 20px;
+  font-weight: 500; 
+  margin-top: 0;
+
+}
+.schedule {
+  width: 1235px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #ff9f1c;
+  border-radius: 0 0 50px 50px;
+  text-align: center;
+  padding: 20px 0;
+
+}
+.schedule img {
+  width: 1090px;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. セクション全体の幅とパディングをスマホ用に最適化 */
+  .access-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 30px 0 !important; /* 左右の余白をなくして画面幅いっぱいに */
+    box-sizing: border-box !important;
+  }
+
+  /* 2. コンテナの幅を100%に */
+  .access-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. 地図とアクセス情報を「縦並び」にする */
+  .access-top-wrapper {
+    display: flex !important;
+    flex-direction: column !important; /* 横並びから縦並びに変更 */
+    align-items: stretch !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 0 20px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. 地図エリアの幅を100%、角丸を0pxに */
+  .access-map {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 250px !important; /* スマホで見やすい高さに調整 */
+    border-radius: 0 !important; /* 角丸を0pxにする */
+    box-sizing: border-box !important;
+  }
+
+  .access-map iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* 5. アクセス情報ボックスの幅を100%、角丸を0pxに */
+  .access-info-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important; /* 角丸を0pxにする */
+    padding: 20px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  .access-address {
+    font-size: 16px !important;
+    margin: 5px 0 15px 0 !important;
+  }
+
+  /* アクセス方法（交通手段）の文字サイズ調整 */
+  .method-title {
+    font-size: 18px !important;
+  }
+
+  .method-text {
+    font-size: 14px !important;
+  }
+
+  /* 6. 診療時間（スケジュール）エリアの幅を100%、角丸を0pxに */
+  .schedule {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important; /* 角丸を0pxにする */
+    padding: 20px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 7. スケジュール内の画像もスマホの画面幅（100%）に合わせる */
+  .schedule img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ==================================================================== */
+/* フッター */
+footer {
+  background-color: #e6f0fa;
+  padding: 60px 20px 30px;
+  box-sizing: border-box;
+  width: 1440px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+#footer-left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#footer-left-container .logo img {
+  width: 290px;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 0;
+}
+#footer-left-container .btn-wrapper {
+  width: 244px; 
+}
+#footer-left-container .btn {
+  font-size: 24px;
+  font-weight: 500;
+}
+#footer-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#footer-right-container .phone-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-top: #005bac 1px solid;
+  border-bottom: #005bac 1px solid;
+  width: 100%;
+  padding: 15px 30px;
+}
+#footer-right-container .ringer-volume {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  position: static;
+}
+#footer-right-container .tel-numbar {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: static;
+  width: auto;
+  height: auto;
+}
+#footer-right-container .text02 {
+  font-size: 20px;
+  line-height: 1.6;
+  position: static;
+  margin-top: 10px;
+}
+#footer-link {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+ 
+}
+#footer-link a {
+  color: #005bac;
+  font-size: 20px;
+  text-decoration: none;
+  padding-right: 20px;
+  border-right:#005bac 2px solid;
+}
+#footer-link a:last-child {
+  border-right: none;
+}
+#copyright {
+  max-width: 1440px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+} 
+
+/* フッターメディアクエリ(768px以下） */
+@media screen and (max-width:768px) {
+footer {
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 15px 20px;
+  box-sizing: border-box;
+}
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+}
+#footer-left-container {
+  width: 100%;
+  align-items: center;
+}
+#footer-left-container .logo img {
+  width: 220px;
+  margin-bottom: 15px;
+}
+#footer-left-container .btn {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: nowrap;
+}
+#footer-right-container {
+  width: 100%;
+  align-items: center;
+}
+#footer-right-container .phone-info-row {
+  gap: 15px;
+  padding: 12px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#footer-right-container .ringer-volume {
+    width: 40px !important;
+  }
+
+  #footer-right-container .tel-numbar {
+    font-size: 28px !important;
+  }
+
+  #footer-right-container .text02 {
+    font-size: 14px !important;
+  }
+
+  /* フッター下部のリンク（ナビゲーション）の折り返し・余白調整 */
+  #footer-link {
+    gap: 10px 15px !important;
+    padding: 0 10px !important;
+    box-sizing: border-box;
+  }
+
+  #footer-link a {
+    font-size: 14px !important;
+    padding-right: 15px !important;
+  }
+
+  /* コピーライトの文字サイズ */
+  #copyright {
+    font-size: 12px !important;
+    margin-top: 20px !important;
+  }  
+} 
