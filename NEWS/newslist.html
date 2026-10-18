@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SMILE DENTAL CLINIC - NEWS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="最新情報">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../CSS/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/news_blog_voice.css">
+ </head>
+ <body>
+  <!-- ここからヘッダー -->
+   <header>
+    <a class="logo" href="index.html" >
+      <img src="../images/logo/smile-dental-clinic-high-resolution-logo-transparent.svg" alt="クリニック名">
+    </a>
+    <!-- ハンバーガーメニュー -->
+    <button id="menu-icon" onclick="document.getElementById('nav-menu').style.display = 'block'">
+      <img src="../images/icon/メニューアイコン.png" alt="ハンバーガーメニューを開く">
+    </button>
+    <!-- ナビゲーションメニュー -->
+    <div id="nav-menu">
+      <button id="close" onclick="document.getElementById('nav-menu').style.display = 'none'">
+        <img src="../images/icon/クローズアイコン.png" alt="ナビゲーションを閉じる">
+      </button>
+      
+      <p class="menu-title">MENU</p>
+
+      <nav>
+        <ul>
+          <li><a class="menu" href="../index.html"onclick="document.getElementById('nav-menu').style.display = 'none'">ホーム</a></li>
+          <li><a class="menu" href="../index.html#concept"onclick="document.getElementById('nav-menu').style.display = 'none'">当院について</a></li>
+          <li>
+            <a class="menu" href="../index.html#medical-section"onclick="document.getElementById('nav-menu').style.display = 'none'">診療案内</a>
+            <ul class="sub-menu">
+              <li><a href="../MEDICAL/medical.html#general"onclick="document.getElementById('nav-menu').style.display = 'none'">一般歯科</a></li>
+              <li><a href="../MEDICAL/medical.html#aesthetic"onclick="document.getElementById('nav-menu').style.display = 'none'">審美歯科</a></li>
+              <li><a href="../MEDICAL/medical.html#preventive"onclick="document.getElementById('nav-menu').style.display = 'none'">予防歯科</a></li>
+            </ul>
+          </li>
+           <li>
+            <a class="menu" href="../index.html#director">スタッフ紹介</a>
+            <ul class="sub-menu">
+              <li><a href="../index.html#director">院長紹介</a></li>
+              <li><a href="../CONCEPT_MEMBER/concept-menber.html#director"onclick="document.getElementById('nav-menu').style.display = 'none'">スタッフ紹介</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="menu" href="../index.html#news-section"onclick="document.getElementById('nav-menu').style.display = 'none'">お知らせ</a>
+            <ul class="sub-menu">
+              <li><a href="../NEWS/newslist.html#news"onclick="document.getElementById('nav-menu').style.display = 'none'">お知らせ</a></li>
+              <li><a href="../NEWS/newslist.html#voice"onclick="document.getElementById('nav-menu').style.display = 'none'">患者様の声</a></li>
+              <li><a href="../NEWS/newslist.html#bolg"onclick="document.getElementById('nav-menu').style.display = 'none'">スタッフブログ</a></li>
+            </ul>
+          </li>
+           <li>
+            <a class="menu" href="../index.html#contact-section"onclick="document.getElementById('nav-menu').style.display = 'none'">お問い合わせ</a>
+            <ul class="sub-menu">
+              <li><a href="tel:000000000">電話予約</a></li>
+              <li><a href="../CONTACT/contact.html"onclick="document.getElementById('nav-menu').style.display = 'none'">WEBお問い合わせ</a></li>
+            </ul>
+          </li>
+          <li><a class="menu" href="../index.html#access"onclick="document.getElementById('nav-menu').style.display = 'none'">アクセス</a></li>
+        </ul>
+      </nav>
+    </div>
+   </header>
+  <!-- ヘッダーここまで -->
+
+  <main>
+    <article>
+      <section class="newslist-container">
+        <div class="section-header">
+          <h2 class="title">最新情報</h2>
+          <p class="subtitle">News</p>
+        </div>
+        <!-- フィルタータブ -->
+        <div class="filter-tabs">
+          <a href="newslist.html#newslist" class="tab activ" data-category="all">すべて</a>
+          <a href="../CUSTOM/staffblog.html" class="tab" data-category="blog">ブログ</a>
+          <a href="../NEWS/news-date.html" class="tab" data-category="news">お知らせ</a>
+          <a href="../CUSTOM/customervoice.html" class="tab" data-category="voice">患者様の声</a>
+        </div>
+        <!-- 　お知らせ一覧 -->
+        <div id="news-list-container">
+        <div class="news-card" data-category="voice">
+          <div class="news-icon">
+            <img src="../images/icon/humanアイコン.png" alt="人のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.09.25</p>
+              <p class="news-label">患者様の声</p>
+            </div>
+            <h2 class="news-title">佐藤太郎　様</h2>
+            <p class="news-text">スタッフのみなさんがとても親切で、治療中もリラックスできました。<br>説明も丁寧で安心できました！</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="news">
+          <div class="news-icon">
+            <img src="../images/icon/news-toothアイコン.png" alt="歯のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.08.01</p>
+              <p class="news-label">お知らせ</p>
+            </div>
+            <h2 class="news-title">お盆期間　8/13(木)~15(土)の診察について</h2>
+            <p class="news-text">お盆期間　8/13の午後から8/15終日、休診となります。<br>8/17(月)から通常通り診察いたします。</p>
+          </div>
+          <a href="../NEWS/news-date.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="news">
+          <div class="news-icon">
+            <img src="../images/icon/humanアイコン.png" alt="人のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.07.31</p>
+              <p class="news-label">患者様の声</p>
+            </div>
+            <h2 class="news-title">伊藤裕子　様</h2>
+            <p class="news-text">子供が歯医者嫌いで困っていましたが、スタッフの優しい対応のおかげで、<br>今では積極的に通院しています。</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="blog">
+          <div class="news-icon">
+            <img src="../images/icon/news-toothアイコン.png" alt="歯のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.06.04</p>
+              <p class="news-label">ブログ</p>
+            </div>
+            <h2 class="news-title">6/4は虫歯予防デー</h2>
+            <p class="news-text">こんにちは！歯科衛生士の加藤です。<br>毎年6/4は6（む）4（し）の語呂合わせから｢虫歯予防デーになっています。<br>虫歯予防のためには3つのステップがあります。今日はその3つのステップを...</p>
+          </div>
+          <a href="../CUSTOM/staffblog.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="news">
+          <div class="news-icon">
+            <img src="../images/icon/news-toothアイコン.png" alt="歯のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.08.01</p>
+              <p class="news-label">お知らせ</p>
+            </div>
+            <h2 class="news-title">お盆期間　8/13(木)~15(土)の診察について</h2>
+            <p class="news-text">お盆期間　8/13の午後から8/15終日、休診となります。<br>8/17(月)から通常通り診察いたします。</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="voice">
+          <div class="news-icon">
+            <img src="../images/icon/humanアイコン.png" alt="人のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.09.25</p>
+              <p class="news-label">患者様の声</p>
+            </div>
+            <h2 class="news-title">佐藤太郎　様</h2>
+            <p class="news-text">スタッフのみなさんがとても親切で、治療中もリラックスできました。<br>説明も丁寧で安心できました！</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="voice">
+          <div class="news-icon">
+            <img src="../images/icon/humanアイコン.png" alt="人のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.09.25</p>
+              <p class="news-label">患者様の声</p>
+            </div>
+            <h2 class="news-title">佐藤太郎　様</h2>
+            <p class="news-text">スタッフのみなさんがとても親切で、治療中もリラックスできました。<br>説明も丁寧で安心できました！</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="voice">
+          <div class="news-icon">
+            <img src="../images/icon/humanアイコン.png" alt="人のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.09.25</p>
+              <p class="news-label">患者様の声</p>
+            </div>
+            <h2 class="news-title">佐藤太郎　様</h2>
+            <p class="news-text">スタッフのみなさんがとても親切で、治療中もリラックスできました。<br>説明も丁寧で安心できました！</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="voice">
+          <div class="news-icon">
+            <img src="../images/icon/humanアイコン.png" alt="人のアイコン">
+          </div>
+          <div class="news-content" data-category="voice">
+            <div class="news-meta">
+              <p class="news-date">2026.09.25</p>
+              <p class="news-label">患者様の声</p>
+            </div>
+            <h2 class="news-title">佐藤太郎　様</h2>
+            <p class="news-text">スタッフのみなさんがとても親切で、治療中もリラックスできました。<br>説明も丁寧で安心できました！</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="news-card" data-category="voice">
+          <div class="news-icon">
+            <img src="../images/icon/humanアイコン.png" alt="人のアイコン">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <p class="news-date">2026.09.25</p>
+              <p class="news-label">患者様の声</p>
+            </div>
+            <h2 class="news-title">佐藤太郎　様</h2>
+            <p class="news-text">スタッフのみなさんがとても親切で、治療中もリラックスできました。<br>説明も丁寧で安心できました！</p>
+          </div>
+          <a href="../CUSTOM/customervoice.html" class="btn">もっと見る</a>
+        </div>
+        <div class="pagenation">
+          <a href="#" class="page-num">1</a>
+          <a href="#" class="page-num">2</a>
+          <a href="#" class="page-num">3</a>
+          <a href="#" class="page-num">次へ >></a>
+        </div>
+      <section>
+    </article>
+  </main>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.filter-tabs .tab');
+    const cards = document.querySelectorAll('.news-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault(); // ページ内リンクのデフォルト動作を防ぐ
+
+        // 1. すべてのタブから active クラスを外して、クリックされたタブに付与
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+
+        // 2. 選択されたカテゴリーを取得
+        const category = this.getAttribute('data-category');
+
+        // 3. 記事カードをフィルターして表示・非表示を切り替え
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (category === 'all' || cardCategory === category) {
+            card.classList.remove('is-hidden');
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
+ 
+ 
+  <!-- フッターここから -->
+  <footer>
+    <div class="footer-top">
+    <div id="footer-left-container">
+      <a class="logo" href="../index.html">
+        <img src="../images/logo/smile-dental-clinic-high-resolution-logo-transparent.svg" alt="smiledentalclinic">
+      </a>
+      <div class="btn-wrapper">
+        <a href="../index.html#contact-section" class="btn">お問い合わせ<br>はこちら　&rarr;</a>
+      </div>
+    </div>
+    <div id="footer-right-container">
+      <div class="phone-info-row">
+        <img class="ringer-volume" src="../images/icon/Ringer-Volume.png" alt="電話のアイコン">
+        <div class="tel-numbar">000-000-0000</div>
+      </div>
+      <div class="text02">
+        8:30~12:00、14:30~17:30<br>
+        （土曜 8:30~12:30）<br>
+        ※水・日・祝 休診
+      </div>
+    </div>
+    </div>
+    <div id="footer-link">
+      <a href="../index.html#concept">当院について</a>
+      <a href="../index.html#medical-section">診療内容</a>
+      <a href="../index.html#director">スタッフ紹介</a>
+      <a href="../index.html#news-section">お知らせ</a>
+      <a href="../index.html#contact-section">お問い合わせ</a>
+      <a href="../index.html#access">アクセス</a>
+    </div>
+    <div id="copyright">
+      <p>&copy;Smail Dental Clinic All Right Reserved.</p>
+    </div>
+  </footer>
+ </body>
+</html>
